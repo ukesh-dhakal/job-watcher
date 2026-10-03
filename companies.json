@@ -4,93 +4,210 @@
     "url": "https://www.lftechnology.com/careers#currentOpenings"
   },
   {
-    "name": "Cotiviti Nepal",
-    "url": "https://www.cotiviti.com/careers"
+    "name": "Merojob - IT & Telecom",
+    "url": "https://merojob.com/category/it-telecommunication",
+    "follow": false
+  },
+  {
+    "name": "Merojob - DevOps search",
+    "url": "https://merojob.com/search/?q=devops",
+    "follow": false
+  },
+  {
+    "name": "Merojob - Cloud search",
+    "url": "https://merojob.com/search/?q=cloud",
+    "follow": false
+  },
+  {
+    "name": "Merojob - System Administrator search",
+    "url": "https://merojob.com/search/?q=system+administrator",
+    "follow": false
+  },
+  {
+    "name": "Merojob - Linux search",
+    "url": "https://merojob.com/search/?q=linux",
+    "follow": false
+  },
+  {
+    "name": "Kumari Job",
+    "url": "https://www.kumarijob.com",
+    "follow": false
+  },
+  {
+    "name": "JobsNepal",
+    "url": "https://www.jobsnepal.com",
+    "follow": false
+  },
+  {
+    "name": "JobAxle",
+    "url": "https://www.jobaxle.com",
+    "follow": false
+  },
+  {
+    "name": "NecoJobs",
+    "url": "https://www.necojobs.com.np",
+    "follow": false
+  },
+  {
+    "name": "Kamkhoj (aggregator)",
+    "url": "https://www.kamkhoj.com",
+    "follow": false
+  },
+  {
+    "name": "NTC Recruitment",
+    "url": "https://ntc-recruitment.gov.np",
+    "follow": false
+  },
+  {
+    "name": "Public Service Commission",
+    "url": "https://psc.gov.np",
+    "follow": false
+  },
+  {
+    "name": "Leapfrog Technology",
+    "url": "https://www.lftechnology.com"
+  },
+  {
+    "name": "F1Soft Group (eSewa)",
+    "url": "https://f1soft.com"
+  },
+  {
+    "name": "CloudFactory",
+    "url": "https://www.cloudfactory.com"
+  },
+  {
+    "name": "Guardsix (Logpoint)",
+    "url": "https://www.guardsix.com"
+  },
+  {
+    "name": "Deerwalk",
+    "url": "https://www.deerwalk.com"
   },
   {
     "name": "Cedar Gate Technologies",
-    "url": "https://www.cedargate.com/careers"
+    "url": "https://www.cedargate.com"
   },
   {
-    "name": "LogPoint Nepal",
-    "url": "https://www.logpoint.com/en/company/careers"
+    "name": "Maitri Services",
+    "url": "https://maitriservices.com"
   },
   {
-    "name": "Fusemachines Nepal",
-    "url": "https://www.fusemachines.com/careers"
+    "name": "Fusemachines",
+    "url": "https://www.fusemachines.com"
   },
   {
-    "name": "Docsumo",
-    "url": "https://docsumo.com/careers"
+    "name": "Ycotek",
+    "url": "https://ycotek.com"
   },
   {
-    "name": "Yarsagumba Software",
-    "url": "https://yarsagumba.com/careers"
+    "name": "Spiralogics",
+    "url": "https://spiralogics.com"
   },
   {
-    "name": "Grepsr",
-    "url": "https://www.grepsr.com/careers"
+    "name": "Young Innovations",
+    "url": "https://younginnovations.com.np"
   },
   {
     "name": "Genese Solution",
-    "url": "https://www.genesesolution.com/careers"
+    "url": "https://www.genesesolution.com"
   },
   {
-    "name": "F1Soft International",
-    "url": "https://f1soft.com/careers"
+    "name": "InfoDevelopers",
+    "url": "https://infodev.com.np"
   },
   {
-    "name": "eSewa",
-    "url": "https://esewa.com.np/careers"
+    "name": "Hamro Patro",
+    "url": "https://www.hamropatro.com"
   },
   {
     "name": "Khalti",
-    "url": "https://khalti.com/careers"
+    "url": "https://khalti.com"
   },
   {
-    "name": "Fonepay",
-    "url": "https://fonepay.com/careers"
+    "name": "NAXA",
+    "url": "https://www.naxa.com.np"
   },
   {
-    "name": "YoungInnovations",
-    "url": "https://younginnovations.com.np/careers"
+    "name": "Geek Tech Solutions",
+    "url": "https://www.thegtspl.com"
   },
   {
-    "name": "SoftNEP",
-    "url": "https://www.softnep.com/career"
+    "name": "Zunkiree Labs",
+    "url": "https://zunkireelabs.com"
   },
   {
-    "name": "Codewing Solutions",
-    "url": "https://codewing.co/careers"
+    "name": "Dignep Group",
+    "url": "https://dignep.com.np"
+  },
+  {
+    "name": "Proshore",
+    "url": "https://proshore.eu"
+  },
+  {
+    "name": "Tekvortex",
+    "url": "https://tekvortex.com"
+  },
+  {
+    "name": "Docsumo",
+    "url": "https://www.docsumo.com"
+  },
+  {
+    "name": "Niural",
+    "url": "https://www.niural.com"
   },
   {
     "name": "Bajra Technologies",
-    "url": "https://bajratechnologies.com/careers"
+    "url": "https://bajratechnologies.com"
   },
   {
-    "name": "Sprout Technology Services",
-    "url": "https://sprout-tech.com/careers"
+    "name": "Deerhold",
+    "url": "https://deerhold.com"
   },
   {
-    "name": "Incessant Rain Studios",
-    "url": "https://www.incessantrain.com/careers"
+    "name": "GrowByData",
+    "url": "https://growbydata.com"
   },
   {
-    "name": "WorldLink Communications",
-    "url": "https://worldlink.com.np/careers"
+    "name": "Yarsa Tech & Labs",
+    "url": "https://www.yarsalabs.com"
   },
   {
-    "name": "Vianet Communications",
-    "url": "https://www.vianet.com.np/careers"
+    "name": "Techkraft",
+    "url": "https://techkraftinc.com"
   },
   {
-    "name": "Classic Tech",
-    "url": "https://www.classic.com.np/careers"
+    "name": "Asterdio",
+    "url": "https://asterdio.com"
   },
   {
-    "name": "Subisu Cablenet",
-    "url": "https://subisu.net.np/careers"
+    "name": "Devfinity",
+    "url": "https://devfinity.com"
   },
+  {
+    "name": "Delta Tech",
+    "url": "https://deltatechnepal.com"
+  },
+  {
+    "name": "Tuna Technology",
+    "url": "https://tunatechnology.com"
+  },
+  {
+    "name": "Nepsavvy",
+    "url": "https://nepsavvy.com"
+  },
+  {
+    "name": "WorldLink",
+    "url": "https://www.worldlink.com.np"
+  },
+  {
+    "name": "Vianet",
+    "url": "https://www.vianet.com.np"
+  },
+  {
+    "name": "Subisu",
+    "url": "https://www.subisu.net.np"
+  },
+
 {
 "name":"Verisk Analytic",
 "url":"https://fa-ewmy-saasfaprod1.fa.ocs.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_1/jobs?location=Nepal&locationId=300000000464166&locationLevel=country&mode=location"
