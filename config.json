@@ -1,0 +1,28 @@
+{
+  "include": [
+    "devops",
+    "cloud",
+    "sysadmin",
+    "system administrator",
+    "systems administrator",
+    "system admin",
+    "infrastructure",
+    "sre",
+    "site reliability",
+    "linux",
+    "network engineer",
+    "it officer"
+  ],
+  "exclude": [
+    "senior",
+    "sr",
+    "lead",
+    "manager",
+    "head",
+    "principal",
+    "director",
+    "architect",
+    "sales",
+    "marketing"
+  ]
+}
