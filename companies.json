@@ -30,37 +30,27 @@
   },
   {
     "name": "Kumari Job",
-    "url": "https://www.kumarijob.com",
+    "url": "https://www.kumarijob.com/search?keywords=cloud",
     "follow": false
   },
   {
     "name": "JobsNepal",
-    "url": "https://www.jobsnepal.com",
+    "url": "https://www.jobsnepal.com/search?q=cloud",
     "follow": false
   },
   {
     "name": "JobAxle",
-    "url": "https://www.jobaxle.com",
+    "url": "https://jobaxle.com/search",
     "follow": false
   },
   {
     "name": "NecoJobs",
-    "url": "https://www.necojobs.com.np",
+    "url": "https://www.necojobs.com.np/search?search=cloud",
     "follow": false
   },
   {
     "name": "Kamkhoj (aggregator)",
-    "url": "https://www.kamkhoj.com",
-    "follow": false
-  },
-  {
-    "name": "NTC Recruitment",
-    "url": "https://ntc-recruitment.gov.np",
-    "follow": false
-  },
-  {
-    "name": "Public Service Commission",
-    "url": "https://psc.gov.np",
+    "url": "https://www.kamkhoj.com/jobs?search=cloud&hero-location=",
     "follow": false
   },
   {
@@ -73,15 +63,11 @@
   },
   {
     "name": "CloudFactory",
-    "url": "https://www.cloudfactory.com"
+    "url": "https://apply.workable.com/cloudfactory/"
   },
   {
     "name": "Guardsix (Logpoint)",
-    "url": "https://www.guardsix.com"
-  },
-  {
-    "name": "Deerwalk",
-    "url": "https://www.deerwalk.com"
+    "url": "https://guardsix.com/join-us"
   },
   {
     "name": "Cedar Gate Technologies",
@@ -89,23 +75,23 @@
   },
   {
     "name": "Maitri Services",
-    "url": "https://maitriservices.com"
+    "url": "https://www.linkedin.com/company/maitri-services/jobs/?viewAsMember=true"
   },
   {
     "name": "Fusemachines",
-    "url": "https://www.fusemachines.com"
+    "url": "https://jobs.iqvia.com/en/jobs?businesses=CEDAR+GATE+TECHNOLOGIES"
   },
   {
     "name": "Ycotek",
-    "url": "https://ycotek.com"
+    "url": "https://ycotek.com/careers-at-yco/#career-list"
   },
   {
     "name": "Spiralogics",
-    "url": "https://spiralogics.com"
+    "url": "https://career.spiralogics.com/Home"
   },
   {
     "name": "Young Innovations",
-    "url": "https://younginnovations.com.np"
+    "url": "https://younginnovations.com.np/vacancy"
   },
   {
     "name": "Genese Solution",
@@ -125,84 +111,70 @@
   },
   {
     "name": "Geek Tech Solutions",
-    "url": "https://www.thegtspl.com"
+    "url": "https://www.thegtspl.com/career#open-roles"
   },
   {
     "name": "Zunkiree Labs",
-    "url": "https://zunkireelabs.com"
+    "url": "https://zunkireelabs.com/careers/"
   },
   {
     "name": "Dignep Group",
-    "url": "https://dignep.com.np"
+    "url": "https://dignep.com.np/careers/"
   },
   {
     "name": "Proshore",
-    "url": "https://proshore.eu"
+    "url": "https://proshore.eu/careers#current_openings"
   },
   {
     "name": "Tekvortex",
-    "url": "https://tekvortex.com"
-  },
-  {
-    "name": "Docsumo",
-    "url": "https://www.docsumo.com"
+    "url": "https://tekvortex.com/careers/"
   },
   {
     "name": "Niural",
-    "url": "https://www.niural.com"
+    "url": "https://www.niural.com/careers"
   },
   {
     "name": "Bajra Technologies",
-    "url": "https://bajratechnologies.com"
-  },
-  {
-    "name": "Deerhold",
-    "url": "https://deerhold.com"
+    "url": "https://bajratechnologies.com/jobs#jobs_grid"
   },
   {
     "name": "GrowByData",
-    "url": "https://growbydata.com"
+    "url": "https://growbydata.com/career-overview/"
   },
   {
     "name": "Yarsa Tech & Labs",
-    "url": "https://www.yarsalabs.com"
+    "url": "https://www.yarsalabs.com/jobs/engineering/"
   },
   {
     "name": "Techkraft",
-    "url": "https://techkraftinc.com"
+    "url": "https://careers.techkraftinc.com/jobs/Careers"
   },
-  {
-    "name": "Asterdio",
-    "url": "https://asterdio.com"
-  },
+
   {
     "name": "Devfinity",
-    "url": "https://devfinity.com"
+    "url": "https://devfinity.com/careers/#career-lists"
   },
-  {
-    "name": "Delta Tech",
-    "url": "https://deltatechnepal.com"
-  },
+
   {
     "name": "Tuna Technology",
-    "url": "https://tunatechnology.com"
+    "url": "https://tunatechnology.com/company/career"
   },
   {
     "name": "Nepsavvy",
-    "url": "https://nepsavvy.com"
+    "url": "https://nepsavvy.com/careers"
   },
   {
     "name": "WorldLink",
-    "url": "https://www.worldlink.com.np"
+    "url": "https://worldlink.com.np/career/"
   },
   {
     "name": "Vianet",
-    "url": "https://www.vianet.com.np"
+    "url": "https://www.vianet.com.np/vacancy/"
   },
-  {
-    "name": "Subisu",
-    "url": "https://www.subisu.net.np"
-  },
+{
+  "name":"Linkedin",
+  "url":"https://www.linkedin.com/jobs/search/?currentJobId=4470283784&f_E=1%2C2&keywords=cloud%20engineer&origin=JOB_SEARCH_PAGE_JOB_FILTER"
+},
 
 {
 "name":"Verisk Analytic",
