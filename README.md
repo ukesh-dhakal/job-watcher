@@ -1,6 +1,7 @@
 # job-watcher
 
 Checks career pages every hour and sends new matching jobs to Discord.
+Matching notifications include the job description when the source page exposes it.
 
 ## Setup (once)
 1. Push this folder to a GitHub repo (keep `.github/workflows/jobs.yml` in place).
@@ -22,6 +23,15 @@ can have its own URL. Either a plain URL or a name + url:
 
 Keep a comma after every entry except the last. Greenhouse and Lever links are
 detected automatically. Delete an entry to stop watching that company.
+For a regular HTML career page, you can narrow link discovery with a CSS selector:
+
+```json
+{ "name": "Example Co", "url": "https://example.com/careers", "selector": ".job-listing a" }
+```
+
+The scraper reads JobPosting structured data when available and otherwise follows
+matching job links to collect the description. Pages that build listings only in a
+browser with JavaScript may still need a direct jobs API or a page-specific selector.
 
 ## Change which roles you get
 Edit `"include"` (title must contain one of these words) and `"exclude"`
