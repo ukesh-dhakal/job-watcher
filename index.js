@@ -29,6 +29,9 @@ if (!Array.isArray(config.include) || !config.include.length || !Array.isArray(c
 }
 const includeRe = toRegex(config.include);
 const excludeRe = config.exclude.length ? toRegex(config.exclude) : null;
+const roleTitleRe = /\b(engineer|developer|administrator|admin|sysadmin|analyst|architect|specialist|technician|officer|intern|associate|consultant|support|help ?desk|devops|sre|operator|coordinator|programmer|technologist|manager|director|lead)\b/i;
+const jobPathRe = /(?:^|[\/_-])(jobs?|careers?|vacancies|vacancy|positions?|openings?|postings?|requisitions?|jobdetails?)(?:[\/_-]|$)/i;
+const jobContextRe = /\b(apply|full[- ]?time|part[- ]?time|contract|employment|job description|vacancy|position|posted|location)\b/i;
 
 const isMatch = (title) =>
   includeRe.test(title) && !(excludeRe && excludeRe.test(title));
@@ -62,6 +65,11 @@ async function get(url, asJson = false) {
 }
 
 const clean = (s = "") => String(s).replace(/\s+/g, " ").trim();
+const limitWords = (text, maxWords = 100) => {
+  const words = clean(text).split(" ").filter(Boolean);
+  if (words.length <= maxWords) return words.join(" ");
+  return `${words.slice(0, maxWords - 1).join(" ")}…`;
+};
 const canonicalUrl = (value, base) => {
   if (typeof value !== "string" || !value.trim()) return null;
   try {
@@ -120,6 +128,7 @@ const fetchers = {
       const title = clean(link.attr("aria-label") || link.text());
       const url = canonicalUrl(link.attr("href"), src.url);
       if (!url || title.length < 4 || title.length > 140 || isBoilerplateLink(title)) return;
+      if (!isLikelyJobLink($, link, title, url)) return;
       jobs.push({ title, url, location: "" });
     });
     return [...new Map(jobs.map((job) => [job.url, job])).values()];
@@ -128,6 +137,20 @@ const fetchers = {
 
 function isBoilerplateLink(title) {
   return /^(apply( now)?|learn more|read more|view (all )?(jobs?|careers?)|careers?|jobs?|home|about|contact|privacy|terms|sign in|log in)$/i.test(title);
+}
+
+function isLikelyJobLink($, link, title, url) {
+  if (!roleTitleRe.test(title)) return false;
+  const target = new URL(url);
+  const hasJobPath = jobPathRe.test(`${target.pathname}${target.hash}`);
+  const card = link.closest(
+    "article, li, [class*='job'], [id*='job'], [class*='career'], [class*='vacan'], [class*='opening'], [class*='position'], [class*='listing'], [class*='result']"
+  );
+  const cardAttrs = card.length ? `${card.attr("class") || ""} ${card.attr("id") || ""}` : "";
+  const cardText = card.length ? clean(card.text()) : "";
+  const hasJobCard = /job|career|vacan|opening|position|listing|result/i.test(cardAttrs)
+    || jobContextRe.test(cardText);
+  return hasJobPath || hasJobCard;
 }
 
 function extractStructuredJobs($, baseUrl) {
@@ -267,11 +290,16 @@ async function sendToDiscord(jobs) {
         continue;
       }
 
-      const header = [job.company, job.location].filter(Boolean).join(" • ");
-      const description = [header, job.description || "Job description unavailable"]
-        .filter(Boolean).join("\n\n").slice(0, 4096);
-      const embed = { title, url, description, color: 0x2ecc71 };
-      const textLength = title.length + description.length;
+      const description = limitWords(job.description || "Job description unavailable");
+      const embed = {
+        title,
+        url,
+        author: { name: clean(job.company).slice(0, 256) || "Unknown company" },
+        description,
+        color: 0x2ecc71,
+      };
+      if (job.location) embed.fields = [{ name: "Location", value: clean(job.location).slice(0, 1024), inline: true }];
+      const textLength = title.length + embed.author.name.length + description.length + (job.location || "").length;
 
       // Discord limits all embed text in one message to 6000 characters.
       if (embeds.length && embedTextLength + textLength > 5800) break;
