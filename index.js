@@ -251,20 +251,46 @@ const failed = results.filter((result) => result.failed).map(({ src }) => src.na
 const unique = [...new Map(found.map((j) => [j.url, j])).values()].slice(0, MAX_PER_RUN);
 
 async function sendToDiscord(jobs) {
-  for (let i = 0; i < jobs.length; i += 10) {
-    const batch = jobs.slice(i, i + 10);
-    const embeds = batch.map((j) => ({
-      title: j.title.slice(0, 256),
-      url: j.url,
-      description: [j.company, j.location, j.description || "Job description unavailable"].filter(Boolean).join(" • ").slice(0, 4096),
-      color: 0x2ecc71,
-    }));
+  const pending = [...jobs];
+  while (pending.length) {
+    const batch = [];
+    const embeds = [];
+    let embedTextLength = 0;
+
+    while (pending.length && embeds.length < 10) {
+      const job = pending[0];
+      const title = clean(job.title).slice(0, 256) || "New matching job";
+      const url = canonicalUrl(job.url);
+      if (!url) {
+        console.warn(`Skipping job with invalid URL: ${title}`);
+        pending.shift();
+        continue;
+      }
+
+      const header = [job.company, job.location].filter(Boolean).join(" • ");
+      const description = [header, job.description || "Job description unavailable"]
+        .filter(Boolean).join("\n\n").slice(0, 4096);
+      const embed = { title, url, description, color: 0x2ecc71 };
+      const textLength = title.length + description.length;
+
+      // Discord limits all embed text in one message to 6000 characters.
+      if (embeds.length && embedTextLength + textLength > 5800) break;
+      embeds.push(embed);
+      batch.push(job);
+      embedTextLength += textLength;
+      pending.shift();
+    }
+
+    if (!embeds.length) continue;
     const res = await fetch(WEBHOOK, {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ content: "🔔 New matching job(s):", embeds }),
     });
-    if (!res.ok) throw new Error(`Discord HTTP ${res.status}`);
+    if (!res.ok) {
+      const details = await res.text();
+      throw new Error(`Discord HTTP ${res.status}: ${details.slice(0, 1000)}`);
+    }
     batch.forEach((job) => seen.add(job.url));
     fs.writeFileSync(SEEN_FILE, JSON.stringify([...seen], null, 2));
     await new Promise((r) => setTimeout(r, 1000));
